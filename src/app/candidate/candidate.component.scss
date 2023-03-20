@@ -1,0 +1,23 @@
+:host {
+  i {
+    color: #595959;
+  }
+
+  section {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    mat-form-field {
+      min-width: 40em;
+    }
+
+    button {
+      margin-bottom: 1em;
+      margin-left: 2em;
+    }
+  }
+}

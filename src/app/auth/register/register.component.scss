@@ -1,0 +1,11 @@
+:host {
+  mat-card {
+    min-width: 40em;
+  }
+
+  mat-card-content,
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}

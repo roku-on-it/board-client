@@ -1,0 +1,27 @@
+<main>
+  <mat-card *ngFor="let candidate of candidates">
+    <mat-card-header>
+      <mat-card-title>{{ candidate.name }}</mat-card-title>
+      <mat-card-subtitle>{{
+        candidate.candidateProfile.description
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        Contact Email: <span>{{ candidate.candidateProfile.email }}</span>
+      </div>
+      <div>
+        Position: <span>{{ candidate.candidateProfile.position }}</span>
+      </div>
+      <div>
+        Salary: <span>{{ candidate.candidateProfile.salary }}</span>
+      </div>
+      <div>
+        Tech Stack: <span>{{ candidate.candidateProfile.stack }}</span>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <a mat-button [routerLink]="[candidate.id]">Go to profile</a>
+    </mat-card-actions>
+  </mat-card>
+</main>

@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <span>{{ candidate?.name }}</span>
+</mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let message of messages | async">
+    <i>{{ message.fromName }} - </i>{{ message.content }}
+  </mat-list-item>
+</mat-list>
+<section>
+  <mat-form-field appearance="fill">
+    <mat-label>Send message to {{ candidate?.name }}</mat-label>
+    <input #chatInput matInput [formControl]="messageFormControl" />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="sendMessage(candidate.id); chatInput.value = ''"
+  >
+    Send
+  </button>
+</section>
